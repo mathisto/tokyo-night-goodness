@@ -1,0 +1,64 @@
+/* ==UserStyle==
+@name           JIRA Dark Tokyo Night
+@namespace      USO Archive
+@author         Mathisto (Originally Cody Swartz)
+@description    `Tokyo Night JIRA theme`
+@version        20220201.0.0
+@license        WTFPL
+@preprocessor   uso
+==/UserStyle== */
+@-moz-document domain("atlassian.net") {
+  html {
+    filter: invert(86%) hue-rotate(180deg) brightness(105%) contrast(105%);
+    background: #a9b1d6;
+  }
+  body {
+    background: #a9b1d6;
+  }
+  h1 {
+    color: #f7768e !important;
+  }
+  h2 {
+    color: #ff9e64 !important;
+  }
+  a:link {
+    text-decoration: none;
+    color: #2ac3de !important;
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: #bb9af7 !important;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: #9ece6a !important;
+  }
+
+  a:active {
+    text-decoration: underline;
+    color: #9ece6a !important;
+  }
+
+  span[role="img"] {
+    filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(105%);
+  }
+  img,
+  svg,
+  iframe,
+  .emoji-common-emoji-sprite {
+    filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(105%);
+  }
+  /* Fix bug with white edges on sprint board */
+  #gh {
+    padding: 0 40px;
+  }
+  #content {
+    margin: 0;
+  }
+  /* Fix scroll background problems */
+  [data-testid="Content"] > div:first-child {
+    background: #a9b1d6 !important;
+  }
+}
